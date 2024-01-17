@@ -1,0 +1,125 @@
+<div class="bg-white">
+  <%- include('partials/header.ejs'); -%>
+
+  <div
+    class="rounded-lg md:w-4/6 lg:w-4/5 w-fit lg:flex lg:items-center block bg-gray-100 mx-auto mt-14 mb-8 justify-around pt-12 h-full lg:h-dvh"
+  >
+    <div class="imgAnimation">
+      <figure class="max-w-lg">
+        <div
+          role="status"
+          class="skeletonAnimation space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center"
+        >
+          <div
+            class="flex items-center justify-center w-full h-450 bg-gray-300 rounded sm:w-80 dark:bg-gray-700"
+          >
+            <svg
+              class="w-10 h-10 text-gray-200 dark:text-gray-600"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 18"
+            >
+              <path
+                d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="hidden bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4"
+          role="alert"
+          id="bookError"
+        >
+          <p class="font-bold">Book not found.</p>
+          <p>
+            The ISBN provided does not match any existing books in our database.
+            Please double-check the ISBN or, if the book cover is unavailable,
+            you can still add the book without an image.
+          </p>
+          <a href="https://openlibrary.org/"
+            ><span class="hover:underline text-sky-600">Click here</span> to
+            find your ISBN.</a
+          >
+        </div>
+        <img
+          class="h-auto hidden mx-auto max-w-full rounded-lg"
+          src=" https://covers.openlibrary.org/b/isbn/<%= isbn %>-L.jpg?default=false"
+          alt=" book image"
+          onerror="handleImageError()"
+        />
+        <figcaption
+          class="mt-3 text-sm text-center text-gray-600 dark:text-gray-400"
+        >
+          ISBN : <%= isbn %>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div
+      class="lg:border-r-2 lg:border-slate-200 lg:h-2/3 lg:mb-6 sm:invisible lg:visible"
+    ></div>
+    <div class="lg:w-3/6 w-auto block">
+      <form action="/" method="post">
+        <input class="hidden" name="isbn" type="text" value="<%= isbn %>" />
+        <input
+          type="text"
+          id="title"
+          name="title"
+          class="mt-2 md:mt-0 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Enter Book title"
+          required
+        />
+        <div
+          class="h-10 flex justify-between items-center block my-4 bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-300 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-300 dark:focus:border-blue-300"
+        >
+          Select the book rating
+
+          <select
+            id="rating"
+            name="rating"
+            class="h-full rounded-md border-0 bg-transparent py-0 pl-2 pr-7 font-bold text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+          >
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+        </div>
+        <div
+          class="w-full md:mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600"
+        >
+          <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
+            <label for="notes" class="sr-only">Your review</label>
+            <textarea
+              id="notes"
+              name="notes"
+              rows="12"
+              class="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
+              placeholder="Write a note..."
+              required
+            ></textarea>
+          </div>
+          <div
+            class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600"
+          >
+            <button
+              type="submit"
+              class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
+            >
+              Add Book
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer.ejs'); -%>
