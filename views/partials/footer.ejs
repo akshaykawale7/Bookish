@@ -71,7 +71,9 @@
 
 <script>  
 
-   
+
+  
+
  
 function toggleMenu(){
     const toggleMenu = document.querySelector('#toggleMenu');
@@ -126,49 +128,66 @@ function toggleEditor(){
     // Get the button and modal elements
     const deleteBookButton = document.querySelector('[data-modal-toggle="popup-modal"]');
     const modal = document.getElementById('popup-modal');
-    const closeModalButton = modal.querySelector('[data-modal-hide="popup-modal"]');
-    const cancelModalButton = modal.querySelector('[data-modal-hide="popup-modal2"]');
+    const closeModalButton = modal? modal.querySelector('[data-modal-hide="popup-modal"]') :null;
+    const cancelModalButton = modal? modal.querySelector('[data-modal-hide="popup-modal2"]') :null;
 
     
 
 
     // Function to show/hide the modal
    
+    
+   
       function toggleModal() {
       modal.classList.toggle('hidden');
     }
+  
     
   
 
     // Event listener for clicking the "Delete Book" button
-    deleteBookButton.addEventListener('click', toggleModal);
+    if (deleteBookButton) {
+      deleteBookButton.addEventListener('click', toggleModal);
+    }
+ 
 
     // Event listener for clicking the close button in the modal
-    closeModalButton.addEventListener('click', toggleModal);
+    if (closeModalButton) {
+      closeModalButton.addEventListener('click', toggleModal);
+    }
+   
 
      // Event listener for clicking the cancel button in the modal
-     cancelModalButton.addEventListener('click', toggleModal);
+     if (cancelModalButton) {
+      cancelModalButton.addEventListener('click', toggleModal);
+     }
+    
   });
     
 
    // Event listener for skeletons while loading images
-
-  const hiddenImg = document.querySelector(".imgAnimation");
+   document.addEventListener('DOMContentLoaded', function () {
+    const hiddenImg = document.querySelector(".imgAnimation");
   const visibleSkeleton = document.querySelector(".skeletonAnimation");
-  const div = visibleSkeleton.querySelector("div");
-  const img = hiddenImg.querySelector("img");
-
-    function loaded() {
+  const div = visibleSkeleton ? visibleSkeleton.querySelector("div") : null;
+  const img = hiddenImg ? hiddenImg.querySelector("img") : null;
+  function loaded() {
       img.classList.remove("hidden");
       div.classList.add("hidden");
     }
 
+    if (img && div) {
     if (img.complete) {
       loaded();
     } else {
       img.addEventListener("load", loaded);
     }
+  }
 
+   });
+
+ 
+    
    
   
 
@@ -179,7 +198,6 @@ function handleImageError(){
 bookError.classList.toggle('hidden');
 div.classList.toggle("hidden");
 }
-
 
 </script>
 
