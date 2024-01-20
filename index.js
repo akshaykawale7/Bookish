@@ -11,6 +11,10 @@ const db = new pg.Client({
   database: process.env.DATABASE,
   password: process.env.PASSWORD,
   port: process.env.DB_PORT,
+  ssl: {
+    // This property enables SSL
+    rejectUnauthorized: false, // You may need to set this to 'false' if you encounter certificate validation issues
+  },
 });
 db.connect();
 
