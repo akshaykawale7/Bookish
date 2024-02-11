@@ -2146,6 +2146,10 @@ select {
 }
 
 @media (min-width: 768px) {
+  .md\:visible {
+    visibility: visible;
+  }
+
   .md\:left-1\/2 {
     left: 50%;
   }
