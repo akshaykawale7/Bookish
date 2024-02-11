@@ -74,7 +74,7 @@
       >
         <div class="group relative">
           <div
-            class="w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 h-4/5"
+            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:aspect-none bg-gray-200 group-hover:opacity-75 h-4/5"
           >
             <div>
               <div class="flex flex-row justify-center pt-24 mt-14">
@@ -136,7 +136,9 @@
 
         <% books.forEach(book => { %>
         <div class="group relative pb-8 md:pb-0">
-          <div class=" w-full rounded-md group-hover:opacity-75 h-fit md:h-4/5">
+          <div
+            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75 h-fit md:h-4/5"
+          >
             <a href="/books/<%= book.id %>">
               <img
                 src=" https://covers.openlibrary.org/b/isbn/<%= book.isbn %>-L.jpg"
