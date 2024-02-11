@@ -37,10 +37,10 @@ const db = new pg.Client({
   database: process.env.DATABASE,
   password: process.env.PASSWORD,
   port: process.env.DB_PORT,
-  ssl: {
-    // This property enables SSL
-    rejectUnauthorized: false, // You may need to set this to 'false' if you encounter certificate validation issues
-  },
+  // ssl: {
+  //   // This property enables SSL
+  //   rejectUnauthorized: false, // You may need to set this to 'false' if you encounter certificate validation issues
+  // },
 });
 db.connect();
 
@@ -281,7 +281,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: process.env.USER_ProfileURL,
+      callbackURL: process.env.CALLBACK_URL,
       userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
     },
     async (accessToken, refreshToken, profile, cb) => {
