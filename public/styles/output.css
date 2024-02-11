@@ -2106,6 +2106,11 @@ select {
     padding: 2rem;
   }
 
+  .sm\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -2209,6 +2214,10 @@ select {
 
   .md\:w-4\/6 {
     width: 66.666667%;
+  }
+
+  .md\:w-full {
+    width: 100%;
   }
 
   .md\:items-center {
