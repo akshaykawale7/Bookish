@@ -143,9 +143,9 @@
 
       <% if (req.user?.id === userID) { %>
 
-      <div class="flex w-fit md:w-full justify-between mt-8 items-center ">
+      <div class="block md:flex w-full justify-between mt-8 items-center ">
         <button
-          class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs h-12 w-36 rounded-lg border border-gray-900 text-gray-900 hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] flex justify-center items-center gap-3"
+          class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs h-12 w-full md:w-36 rounded-lg border border-gray-900 text-gray-900 hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] flex justify-center items-center gap-3"
           type="button"
           onclick="toggleEditor()"
         >
@@ -173,7 +173,7 @@
           <% if (!public) { %>
 
           <button
-            class="align-middle p-1 text-white bg-blue-600 hover:bg-blue-800 select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs h-12 w-36 rounded-lg hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] flex justify-center items-center gap-3"
+            class="align-middle p-1 text-white bg-blue-600 hover:bg-blue-800 select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs h-12 w-full md:w-36 rounded-lg hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] flex justify-center items-center gap-3"
             type="submit"
           >
             <svg
@@ -194,7 +194,7 @@
           <% } else { %>
 
           <button
-            class="align-middle p-1 text-white bg-blue-600 hover:bg-blue-800 select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs h-12 w-36 rounded-lg hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] flex  justify-center items-center gap-3"
+            class="align-middle p-1 text-white bg-blue-600 hover:bg-blue-800 select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs h-12 w-full md:w-36 rounded-lg hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] flex  justify-center items-center gap-3"
             type="submit"
           >
             <svg
