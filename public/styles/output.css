@@ -1351,9 +1351,9 @@ select {
   --tw-gradient-to: #fef9c3 var(--tw-gradient-to-position);
 }
 
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
+.object-scale-down {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 
 .object-center {
@@ -1694,11 +1694,6 @@ select {
 .text-sky-600 {
   --tw-text-opacity: 1;
   color: rgb(2 132 199 / var(--tw-text-opacity));
-}
-
-.text-sky-700 {
-  --tw-text-opacity: 1;
-  color: rgb(3 105 161 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -2253,6 +2248,11 @@ select {
   .md\:border-slate-200 {
     --tw-border-opacity: 1;
     border-color: rgb(226 232 240 / var(--tw-border-opacity));
+  }
+
+  .md\:object-cover {
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .md\:p-10 {
