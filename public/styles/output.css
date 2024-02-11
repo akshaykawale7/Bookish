@@ -1140,6 +1140,10 @@ select {
   row-gap: 2.5rem;
 }
 
+.gap-y-2 {
+  row-gap: 0.5rem;
+}
+
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -2221,6 +2225,10 @@ select {
 
   .md\:justify-around {
     justify-content: space-around;
+  }
+
+  .md\:gap-y-0 {
+    row-gap: 0px;
   }
 
   .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
