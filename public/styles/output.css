@@ -1123,10 +1123,6 @@ select {
   justify-content: space-around;
 }
 
-.gap-3 {
-  gap: 0.75rem;
-}
-
 .gap-8 {
   gap: 2rem;
 }
@@ -1136,12 +1132,12 @@ select {
        column-gap: 1.5rem;
 }
 
-.gap-y-10 {
-  row-gap: 2.5rem;
+.gap-y-1 {
+  row-gap: 0.25rem;
 }
 
-.gap-y-2 {
-  row-gap: 0.5rem;
+.gap-y-10 {
+  row-gap: 2.5rem;
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2227,8 +2223,8 @@ select {
     justify-content: space-around;
   }
 
-  .md\:gap-y-0 {
-    row-gap: 0px;
+  .md\:gap-3 {
+    gap: 0.75rem;
   }
 
   .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {

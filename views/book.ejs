@@ -143,11 +143,9 @@
 
       <% if (req.user?.id === userID) { %>
 
-      <div
-        class="block gap-y-2 md:gap-y-0 md:flex w-full justify-between mt-8 items-center "
-      >
+      <div class="block md:flex w-full justify-between mt-8 items-center ">
         <button
-          class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs h-12 w-full md:w-36 rounded-lg border border-gray-900 text-gray-900 hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] flex justify-center items-center gap-3"
+          class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs h-12 w-full md:w-36 rounded-lg border border-gray-900 text-gray-900 hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] flex justify-center items-center gap-y-1 md:gap-3"
           type="button"
           onclick="toggleEditor()"
         >
@@ -175,7 +173,7 @@
           <% if (!public) { %>
 
           <button
-            class="align-middle p-1 text-white bg-blue-600 hover:bg-blue-800 select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs h-12 w-full md:w-36 rounded-lg hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] flex justify-center items-center gap-3"
+            class="align-middle p-1 text-white bg-blue-600 hover:bg-blue-800 select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs h-12 w-full md:w-36 rounded-lg hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] flex justify-center items-center gap-y-1 md:gap-3"
             type="submit"
           >
             <svg
@@ -196,7 +194,7 @@
           <% } else { %>
 
           <button
-            class="align-middle p-1 text-white bg-blue-600 hover:bg-blue-800 select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs h-12 w-full md:w-36 rounded-lg hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] flex  justify-center items-center gap-3"
+            class="align-middle p-1 text-white bg-blue-600 hover:bg-blue-800 select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs h-12 w-full md:w-36 rounded-lg hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] flex  justify-center items-center gap-y-1 md:gap-3"
             type="submit"
           >
             <svg
@@ -220,7 +218,7 @@
         <button
           data-modal-target="popup-modal"
           data-modal-toggle="popup-modal"
-          class="align-middle font-sans font-bold text-center uppercase disabled:shadow-none text-xs h-12 w-full md:w-36 rounded-lg bg-gradient-to-tr from-gray-900 to-gray-800 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20  hover:opacity-[0.85] flex justify-center items-center gap-3"
+          class="align-middle font-sans font-bold text-center uppercase disabled:shadow-none text-xs h-12 w-full md:w-36 rounded-lg bg-gradient-to-tr from-gray-900 to-gray-800 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20  hover:opacity-[0.85] flex justify-center items-center gap-y-1 md:gap-3"
           type="button"
         >
           <svg
