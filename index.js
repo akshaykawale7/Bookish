@@ -60,7 +60,7 @@ app.get("/", async (req, res) => {
       orderByClause = "ORDER BY added_on DESC";
       break;
     default:
-      orderByClause = "ORDER BY added_on DESC"; // Handle default sorting criterion
+      orderByClause = "ORDER BY rating DESC"; // Handle default sorting criterion
       break;
   }
 
