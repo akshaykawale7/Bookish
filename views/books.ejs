@@ -20,7 +20,8 @@
         <div
           class="text-center relative rounded-full my-4 md:mb-0 px-3 py-1 text-md leading-6 text-neutral-700 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
         >
-        "A reader lives a thousand lives before he dies, one who never reads lives only one." – George R.R. Martin
+          "A reader lives a thousand lives before he dies, one who never reads
+          lives only one." – George R.R. Martin
         </div>
       </div>
       <div class="text-center">
@@ -47,126 +48,123 @@
   </div>
 </div>
 
-  <div id="bookSection" class="section">
-    <div class="bg-white">
+<div id="bookSection" class="section">
+  <div class="bg-white">
+    <div
+      class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
+    >
       <div
-        class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
+        class="sorting rounded-full flex justify-between px-4 py-2 font-bold text-lg leading-6 text-neutral-700 ring-1 ring-gray-900/10"
       >
-        <div
-          class="sorting rounded-full flex justify-between px-4 py-2 font-bold text-lg leading-6 text-neutral-700 ring-1 ring-gray-900/10"
+        <p>Sort by :</p>
+        <a href="/?sort=title" class="sort-link hover:text-purple-700"
+          >Title <span class="text-purple-500 text-sm "> (A-Z) </span></a
         >
-          <p>Sort by :</p>
-          <a href="/?sort=title" class="sort-link hover:text-purple-700"
-            >Title <span class="text-purple-500 text-sm "> (A-Z) </span></a
-          >
-          <a href="/?sort=rating" class="sort-link hover:text-purple-700"
-            >Rating <span class="text-purple-500 text-sm "> (10-1) </span></a
-          >
-          <a href="/?sort=recent" class="sort-link hover:text-purple-700"
-            >Recent
-            <span class="text-purple-500 text-sm "> (Most recent) </span></a
-          >
-        </div>
-
-        <div
-          class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
+        <a href="/?sort=rating" class="sort-link hover:text-purple-700"
+          >Rating <span class="text-purple-500 text-sm "> (10-1) </span></a
         >
-          <div class="group relative">
-            <div
-              class="w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 h-4/5"
-            >
-              <div>
-                <div class="flex flex-row justify-center pt-24 mt-14">
-                  <div class="px-4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="46"
-                      width="44"
-                      viewBox="0 0 448 512"
-                    >
-                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                      <path
-                        d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"
-                      />
-                    </svg>
-                  </div>
-                  <div class="px-3">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="46"
-                      width="44"
-                      viewBox="0 0 448 512"
-                    >
-                      <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                      <path
-                        d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
-                      />
-                    </svg>
-                  </div>
-                </div>
+        <a href="/?sort=recent" class="sort-link hover:text-purple-700"
+          >Recent
+          <span class="text-purple-500 text-sm "> (Most recent) </span></a
+        >
+      </div>
 
-                <div class="text-center py-5">add a new book</div>
-              </div>
-            </div>
-            <div class="mt-1 block  md:flex md:justify-between">
-              <form action="/compose" method="post">
-                <div>
-                  <div class="relative mt-2 rounded-md shadow-sm">
-                    <input
-                      type="text"
-                      name="isbn"
-                      id="isbn"
-                      class="block w-full rounded-md border-0 py-1.5 pl-6 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                      placeholder="Enter ISBN to add book"
-                    />
-                  </div>
-                  <div class="pt-2">
-                    <button
-                      type="submit"
-                      class="w-full text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
-                    >
-                      Add +
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <% books.forEach(book => { %>
-          <div class="group relative pb-8 md:pb-0">
-            <div
-              class=" w-full rounded-md group-hover:opacity-75 h-fit md:h-4/5"
-            >
-              <a href="/books/<%= book.id %>">
-                <img
-                  src=" https://covers.openlibrary.org/b/isbn/<%= book.isbn %>-L.jpg"
-                  alt="Book cover"
-                  class="h-full w-full object-cover object-center"
-                />
-              </a>
-            </div>
+      <div
+        class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
+      >
+        <div class="group relative">
+          <div
+            class="w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 h-4/5"
+          >
             <div>
-              <h3
-                class="md:text-lg text-md py-1 md:pt-4 font-bold text-gray-700 "
-              >
-                <a href="/books/<%= book.id %>"> Title: <%= book.title %> </a>
-              </h3>
-            </div>
-            <div class="md:pt-5 md:flex md:justify-between">
-              <p class="text-sm text-gray-500">
-                Added on: <%- book.added_on.toISOString().split('T')[0] %>
-              </p>
-              <p class="text-sm font-medium text-gray-700">
-                Rating: <%= book.rating %>/10
-              </p>
+              <div class="flex flex-row justify-center pt-24 mt-14">
+                <div class="px-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="46"
+                    width="44"
+                    viewBox="0 0 448 512"
+                  >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"
+                    />
+                  </svg>
+                </div>
+                <div class="px-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="46"
+                    width="44"
+                    viewBox="0 0 448 512"
+                  >
+                    <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="text-center py-5">add a new book</div>
             </div>
           </div>
-
-          <% }) %>
-
-          <!-- More books... -->
+          <div class="mt-1 block  md:flex md:justify-between">
+            <form action="/compose" method="post">
+              <div>
+                <div class="relative mt-2 rounded-md shadow-sm">
+                  <input
+                    type="text"
+                    name="isbn"
+                    id="isbn"
+                    class="block w-full rounded-md border-0 py-1.5 pl-6 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400  focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    placeholder="Enter ISBN to add book"
+                  />
+                </div>
+                <div class="pt-2">
+                  <button
+                    type="submit"
+                    class="w-full text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                  >
+                    Add +
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
+
+        <% books.forEach(book => { %>
+        <div class="group relative pb-8 md:pb-0">
+          <div class=" w-full rounded-md group-hover:opacity-75 h-fit md:h-4/5">
+            <a href="/books/<%= book.id %>">
+              <img
+                src=" https://covers.openlibrary.org/b/isbn/<%= book.isbn %>-L.jpg"
+                alt="Book cover"
+                class="h-full w-full object-scale-down md:object-cover object-center"
+              />
+            </a>
+          </div>
+          <div>
+            <h3
+              class="md:text-lg text-md py-1 md:pt-4 font-bold text-gray-700 "
+            >
+              <a href="/books/<%= book.id %>"> Title: <%= book.title %> </a>
+            </h3>
+          </div>
+          <div class="md:pt-5 md:flex md:justify-between">
+            <p class="text-sm text-gray-500">
+              Added on: <%- book.added_on.toISOString().split('T')[0] %>
+            </p>
+            <p class="text-sm font-medium text-gray-700">
+              Rating: <%= book.rating %>/10
+            </p>
+          </div>
+        </div>
+
+        <% }) %>
+
+        <!-- More books... -->
       </div>
     </div>
   </div>
