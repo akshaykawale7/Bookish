@@ -23,7 +23,7 @@
                   <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow me</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                          <a href="https://github.com" class="hover:underline ">Github</a>
                       </li>
                       <li>
                           <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">LinkedIn</a>
@@ -82,12 +82,12 @@ function toggleMenu(){
     toggleMenu.classList.toggle('hidden');
     toggleMenu2.classList.toggle('hidden');
   }
-  
 
   
 function toggleEditor(){
     const additionalContent5 = document.querySelector('#additionalContent5');
-    additionalContent5.classList.toggle('hidden');
+    additionalContent5.classList.remove('hidden');
+    additionalContent5.classList.add('block');
     additionalContent2.classList.toggle('hidden');
   }
   function toggleContent() {
@@ -131,32 +131,20 @@ function toggleEditor(){
     const closeModalButton = modal? modal.querySelector('[data-modal-hide="popup-modal"]') :null;
     const cancelModalButton = modal? modal.querySelector('[data-modal-hide="popup-modal2"]') :null;
 
-    
-
-
     // Function to show/hide the modal
-   
-    
-   
       function toggleModal() {
       modal.classList.toggle('hidden');
     }
   
-    
   
-
     // Event listener for clicking the "Delete Book" button
     if (deleteBookButton) {
       deleteBookButton.addEventListener('click', toggleModal);
     }
- 
-
-    // Event listener for clicking the close button in the modal
+   // Event listener for clicking the close button in the modal
     if (closeModalButton) {
       closeModalButton.addEventListener('click', toggleModal);
     }
-   
-
      // Event listener for clicking the cancel button in the modal
      if (cancelModalButton) {
       cancelModalButton.addEventListener('click', toggleModal);
@@ -166,8 +154,8 @@ function toggleEditor(){
     
 
    // Event listener for skeletons while loading images
-   document.addEventListener('DOMContentLoaded', function () {
-    const hiddenImg = document.querySelector(".imgAnimation");
+  document.addEventListener('DOMContentLoaded', function () {
+  const hiddenImg = document.querySelector(".imgAnimation");
   const visibleSkeleton = document.querySelector(".skeletonAnimation");
   const div = visibleSkeleton ? visibleSkeleton.querySelector("div") : null;
   const img = hiddenImg ? hiddenImg.querySelector("img") : null;
@@ -185,12 +173,6 @@ function toggleEditor(){
   }
 
    });
-
- 
-    
-   
-  
-
 
 // For handling error when book not found
 const bookError = document.querySelector("#bookError");

@@ -55,26 +55,28 @@
             </button>
           </div>
           <div class="hidden lg:flex lg:gap-x-12">
-            <a href="/" class="text-sm font-semibold leading-6 text-gray-900"
-              >Home</a
+            <a
+              href="/"
+              class="text-sm font-semibold leading-6 text-neutral-900 relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-neutral-700 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+              >HOME</a
             >
             <a
-              href="/#bookSection"
-              class="text-sm font-semibold leading-6 text-gray-900"
-              >Books</a
+              href="/books"
+              class="text-sm font-semibold leading-6 text-neutral-900 relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-neutral-700 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+              >BOOKS</a
             >
             <a
-              href="/#contactSection"
-              class="text-sm font-semibold leading-6 text-gray-900"
-              >Contact Us</a
+              href="#contactSection"
+              class="text-sm font-semibold leading-6 text-neutral-900 relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-neutral-700 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+              >CONTACT</a
             >
           </div>
           <div id="toggleMenu" class="hidden lg:flex lg:flex-1 lg:justify-end">
             <button
               onclick="toggleMenu()"
-              class="text-sm font-semibold leading-6 text-gray-900"
+              class="text-sm font-semibold leading-6 text-neutral-900"
             >
-              Menu <span aria-hidden="true">&darr;</span>
+              MENU <span aria-hidden="true">&darr;</span>
             </button>
           </div>
         </nav>
@@ -119,23 +121,57 @@
                 <div class="space-y-2 py-6">
                   <a
                     href="/"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-900 hover:bg-gray-50"
                     >Home</a
                   >
                   <a
-                    href="/#bookSection"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    href="/books"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-900 hover:bg-gray-50"
                     >Books</a
                   >
                   <a
-                    href="/#contactSection"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    href="#contactSection"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-neutral-900 hover:bg-gray-50"
                     >Contact Us</a
                   >
+                  <hr />
+                  <% if (!req.user) { %>
+                  <div class="mt-4 space-y-2">
+                    <a
+                      href="/login"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      >Login</a
+                    >
+                    <p class="bold italic text-neutral-400">OR</p>
+                    <a
+                      href="/register"
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      >Sign Up</a
+                    >
+                  </div>
+                  <hr />
+                  <% } else { %>
+                  <div class="mt-8">
+                    <div class="py-4 italic text-neutral-400">
+                      Logged in as <%= req.user.username %>
+                    </div>
+
+                    <div class="text-center">
+                      <a
+                        href="/logout"
+                        class="-mx-3 block rounded-lg px-3 py-2 bg-red-600 text-base font-semibold leading-7 text-white hover:bg-red-800"
+                        >Logout</a
+                      >
+                    </div>
+                  </div>
+                  <hr />
+                  <% } %>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </header>
-    
+    </main>
+  </body>
+</html>

@@ -60,8 +60,20 @@
       class="lg:border-r-2 lg:border-slate-200 lg:h-2/3 lg:mb-6 sm:invisible lg:visible"
     ></div>
     <div class="lg:w-3/6 w-auto block">
-      <form action="/" method="post">
+      <form action="/books" method="post">
         <input class="hidden" name="isbn" type="text" value="<%= isbn %>" />
+        <input
+          class="hidden"
+          name="id"
+          type="text"
+          value="<%= req.user.id %>"
+        />
+        <input
+          class="hidden"
+          name="username"
+          type="text"
+          value="<%= req.user.username %>"
+        />
         <input
           type="text"
           id="title"
@@ -71,7 +83,7 @@
           required
         />
         <div
-          class="h-10 flex justify-between items-center block my-4 bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-300 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-300 dark:focus:border-blue-300"
+          class="h-10 flex justify-between items-center  my-4 bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-300 focus:border-blue-300  w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-300 dark:focus:border-blue-300"
         >
           Select the book rating
 
